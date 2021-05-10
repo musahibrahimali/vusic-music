@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Demo music web app built with material ui an dreact
+
+![Screenshot](Screenshot1.png)
+![Screenshot](Screenshot2.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
