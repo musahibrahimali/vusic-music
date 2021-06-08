@@ -1,35 +1,37 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import '../assets/scss/BottomNavigation.scss';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import SearchIcon from '@material-ui/icons/Search';
 import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
 import Button from "@material-ui/core/Button";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function BottomNavigationMobile() {
+
+    // eslint-disable-next-line no-unused-vars
     const [menuItems, setMenuItem] = useState([
         {
             id: 0,
-            icon: <HomeOutlinedIcon/>,
+            icon: <HomeOutlinedIcon />,
             href: "/home",
             label: "Home"
         },
         {
             id: 1,
-            icon: <SearchIcon/>,
+            icon: <SearchIcon />,
             href: "/home/search",
             label: "Search"
         },
         {
             id: 2,
-            icon: <AccountCircleOutlinedIcon/>,
+            icon: <AccountCircleOutlinedIcon />,
             href: "/home/profile",
             label: "Profile"
         },
         {
             id: 3,
-            icon: <ExploreOutlinedIcon/>,
+            icon: <ExploreOutlinedIcon />,
             href: "/home/about",
             label: "About"
         }
@@ -38,17 +40,17 @@ function BottomNavigationMobile() {
     return (
         <div className="bottom-navigation">
             {
-                menuItems.map(({id, icon, href, label}) => (
+                menuItems.map(({ id, icon, href, label }) => (
                     <Link className={"bottom-navigation-link"} key={id} to={href}>
                         <Button className={`${currPath === href ? "BottomNavAction active" : "BottomNavAction"}`}
-                                    style={{borderRadius: 0}}>
+                            style={{ borderRadius: 0 }}>
                             {icon}
                         </Button>
                         <span className="label">
-                                {
-                                    label
-                                }
-                            </span>
+                            {
+                                label
+                            }
+                        </span>
                     </Link>
                 ))
             }

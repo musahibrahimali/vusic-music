@@ -38,7 +38,7 @@ function Profile() {
                 <div className="top-profile">
                     <Avatar variant={"rounded"} src={require("../assets/img/avatar2.jpg").default}
                         style={{ width: "150px", height: "150px" }}>
-                        VS
+                        MIA
                     </Avatar>
                     <div className="profile-detail">
                         <h3>Music Ibrahim ALi</h3>
